@@ -12,14 +12,14 @@ import {
 
 const ReadMore=({reactHooksDescription})=>{
     const [isExpand,setIsExpand]=useState(false)
-    const [textContent, setTextContent] = useState(reactHooksDescription.slice(0, 171) + '...');
+    const [textContent, setTextContent] = useState(reactHooksDescription.slice(0, 171));
 
     const onClickToggle=()=>{
         setIsExpand(prevState=>(!isExpand))
         if (!isExpand) {
             setTextContent(reactHooksDescription);
         }else {
-            setTextContent(reactHooksDescription.slice(0, 170) + '...');
+            setTextContent(reactHooksDescription.slice(0, 170));
         }
         
     }
